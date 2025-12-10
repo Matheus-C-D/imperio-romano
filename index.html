@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Império Romano — Tributos</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f1020;
+      color: #f3f3f3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .card {
+      background: #1a1c35;
+      border: 2px solid #d4af37;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      max-width: 400px;
+    }
+    .eagle {
+      width: 80px;
+      height: 80px;
+      color: #d4af37;
+      margin-bottom: 10px;
+    }
+    .amount {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #d4af37;
+      margin: 15px 0;
+    }
+    button {
+      background: #d4af37;
+      color: #000;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background: #e0c15a;
+    }
+    #toast {
+      margin-top: 15px;
+      font-weight: bold;
+      color: #d4af37;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <!-- Águia -->
+    <svg class="eagle" viewBox="0 0 64 64" fill="currentColor">
+      <path d="M32 6c7 0 13 3 18 8l4 4-6 2c-3 1-6 2-9 2h-4l8 6c4 3 7 8 8 13l1 5-6-3c-4-2-8-5-11-8l-3-3-3 3c-3 3-7 6-11 8l-6 3 1-5c1-5 4-10 8-13l8-6h-4c-3 0-6-1-9-2l-6-2 4-4c5-5 11-8 18-8zM20 52l3-5 4-3 5-2 5 2 4 3 3 5-7-2-5-1-5 1-7 2z"/>
+    </svg>
+
+    <h1>Império Romano</h1>
+    <p>Dai a César o que é de César</p>
+    <div class="amount">100 mil denários</div>
+    <button id="btnPay">Pagar agora</button>
+    <div id="toast">O Império agradece, pecador(a).</div>
+    <p>Descrição: Impostos ao Império</p>
+  </div>
+
+  <script>
+    const btnPay = document.getElementById('btnPay');
+    const toast = document.getElementById('toast');
+    btnPay.addEventListener('click', () => {
+      toast.style.display = 'block';
+      setTimeout(() => toast.style.display = 'none', 2500);
+    });
+  </script>
+</body>
+</html>
